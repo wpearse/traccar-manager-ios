@@ -72,10 +72,10 @@ class WebService: NSObject, SRWebSocketDelegate {
     }
     
     func webSocket(webSocket: SRWebSocket!, didFailWithError error: NSError!) {
-        reconnectWebSocket()
+        // attempt to reconnect web socket after 10 seconds
+        performSelector(#selector(WebService.reconnectWebSocket), withObject: nil, afterDelay: 10.0)
     }
     
-
     func webSocket(webSocket: SRWebSocket!, didReceiveMessage message: AnyObject!) {
         if let s = message as? String {
             if let data = s.dataUsingEncoding(NSUTF8StringEncoding) {
