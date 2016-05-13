@@ -62,6 +62,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         mapView?.showAnnotations((mapView?.annotations)!, animated: true)
     }
     
+    @IBAction func selectMapType() {
+        let ac = UIAlertController(title: "Change Map Type", message: nil, preferredStyle: .ActionSheet)
+        ac.addAction(UIAlertAction(title: "Satellite", style: .Default, handler: { (_) in
+            self.mapView?.mapType = MKMapType.Satellite
+        }))
+        ac.addAction(UIAlertAction(title: "Hybrid", style: .Default, handler: { (_) in
+            self.mapView?.mapType = MKMapType.Hybrid
+        }))
+        ac.addAction(UIAlertAction(title: "Street", style: .Default, handler: { (_) in
+            self.mapView?.mapType = MKMapType.Standard
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(ac, animated: true, completion: nil)
+    }
+    
     func loginStatusChanged() {
         
         if User.sharedInstance.isAuthenticated {
