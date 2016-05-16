@@ -80,7 +80,7 @@
                     <connections>
                         <outlet property="mapView" destination="uwH-5m-y4X" id="ITx-qS-a6H"/>
                         <segue destination="wTg-2z-vTv" kind="presentation" identifier="ShowLogin" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="XYS-oF-p7B"/>
-                        <segue destination="LWQ-11-nBo" kind="show" identifier="ShowDeviceInfo" id="4He-nw-J2O"/>
+                        <segue destination="LWQ-11-nBo" kind="presentation" identifier="ShowDeviceInfo" modalPresentationStyle="formSheet" id="4He-nw-J2O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ff2-WC-mdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +182,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="9qD-hz-haN" detailTextLabel="ugC-3f-6nP" style="IBUITableViewCellStyleSubtitle" id="gnV-ZO-HxL">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="49.5" width="600" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gnV-ZO-HxL" id="Mbt-0U-Fh9">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
@@ -230,7 +230,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="pui-Se-t53" detailTextLabel="vGO-uU-4tK" style="IBUITableViewCellStyleValue1" id="jz4-1Y-GwG">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="49.5" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jz4-1Y-GwG" id="k7a-bv-4Hr">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>

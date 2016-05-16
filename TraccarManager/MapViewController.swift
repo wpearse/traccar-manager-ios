@@ -184,6 +184,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let dvc = segue.destinationViewController as? DeviceInfoViewController {
+            
+            // show a close button if we're running on an iPad
+            if Definitions.isRunningOniPad {
+                dvc.shouldShowCloseButton = true
+            }
+            
+            // set device on the info view
             if let deviceId = selectedAnnotation?.deviceId {
                 if let device = WebService.sharedInstance.deviceById(deviceId) {
                     dvc.device = device
